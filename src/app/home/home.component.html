@@ -1,0 +1,11 @@
+<app-header [userImg]="profileImg" />
+<app-banner [bannerTitle]="(bannerDetail$ | async)?.original_title" [bannerOverview]="(bannerDetail$ | async)?.overview"
+  [key]="(bannerVideo$ | async)?.results[0].key" />
+<app-movie-carousel [videoContents]="popularMovies" [Title]="'popular Movies'" />
+<app-movie-carousel [videoContents]="topRatedMovies" [Title]="'Top Rated Movies'" />
+<app-movie-carousel [videoContents]="tvShows" [Title]="'TV shows'" />
+<app-movie-carousel [videoContents]="upComingMovies" [Title]="'UP coming shows'" />
+<app-movie-carousel [videoContents]="nowPlayingMovies" [Title]="'NOW Playing Movies'" />
+
+<app-footer></app-footer>
+

@@ -1,0 +1,31 @@
+<div class="relative h-screen w-full overflow-hidden">
+    <img src="assets/images/Login-Netflix.jpg" alt="netflix-login-image" class="object-cover object-center w-full h-full">
+    
+    <!-- Sign In Div -->
+    <div class="absolute inset-0 flex items-center justify-center z-10">
+        <div class="bg-black md:w-3/12 p-12 text-white bg-opacity-75 rounded">
+            <h1 class="font-bold py-5 text-3xl">Sign In</h1>
+            
+            <!-- Login Form -->
+            <form class="space-y-4" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                <div>
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" formControlName="email" id="email" class="w-full mt-1 p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-red-500 outline-none" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium">Password</label>
+                    <input type="password" id="password" formControlName="password" class="w-full mt-1 p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-red-500 outline-none" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="w-full py-3 mt-5 bg-red-600 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">Sign In</button>
+            </form>
+
+            <!-- Additional Links -->
+            <div class="flex justify-between mt-4 text-sm">
+                <a href="#" class="text-gray-400 hover:underline">Forgot Password?</a>
+                <a href="/register" class="text-gray-400 hover:underline">New to Netflix? Sign up now.</a>
+            </div>
+
+            <div id="google-btn" class="mt-5"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="relative h-screen w-full overflow-hidden">
+    <img src="assets/images/Login-Netflix.jpg" alt="netflix-register-image" class="object-cover object-center w-full h-full">
+    
+    <!-- Register Div -->
+    <div class="absolute inset-0 flex items-center justify-center z-10">
+        <div class="bg-black md:w-3/12 p-12 text-white bg-opacity-75 rounded">
+            <h1 class="font-bold py-5 text-3xl">Register</h1>
+            
+            <!-- Register Form -->
+            <form class="space-y-4" [formGroup]="registerForm" (ngSubmit)="submitDetails()">
+                <div>
+                    <label for="name" class="block text-sm font-medium">Name</label>
+                    <input type="text" id="name" formControlName="fullName" class="w-full mt-1 p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-red-500 outline-none" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" formControlName="email" id="email" class="w-full mt-1 p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-red-500 outline-none" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium">Password</label>
+                    <input type="password" formControlName="password" id="password" class="w-full mt-1 p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-red-500 outline-none" placeholder="Enter your password" required>
+                </div>
+                <div>
+                    <label for="confirm-password" class="block text-sm font-medium">Confirm Password</label>
+                    <input type="password" formControlName="confirmPassword" id="confirm-password" class="w-full mt-1 p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-red-500 outline-none" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="w-full py-3 mt-5 bg-red-600 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">Register</button>
+            </form>
+
+            <!-- Additional Links -->
+            <div class="flex justify-between mt-4 text-sm">
+                <a href="#" class="text-gray-400 hover:underline">Already have an account? Sign in.</a>
+            </div>
+
+            <div id="google-btn" class="mt-5"></div>
+        </div>
+    </div>
+</div>
